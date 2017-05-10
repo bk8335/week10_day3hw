@@ -36,12 +36,11 @@ var arrayTasks = {
 		var indexPosition = 0;
 		// .includes
 		for(item of arr){
-			if(arr.includes(item, indexPosition+1)){
+			if((arr.includes(item, indexPosition+1)) && duplicateArray.includes(item) === false){
 				duplicateArray.push(item);
 			}
 			indexPosition += 1;
 		}
-		duplicateArray.pop();
 		return duplicateArray;
 	},
 
