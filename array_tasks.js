@@ -31,21 +31,43 @@ var arrayTasks = {
 		return counter;
 	},
 
-	// findDuplicates: function (arr) {
-		
-	// },
+	findDuplicates: function (arr) {
+		var duplicateArray = [];
+		for(i=0; i<arr.length; i++){
+			if(item[i] === item[i+1]){
+				duplicateArray.push(item);
+			}
+		}
+		return duplicateArray;
+	},
 
-	// removeAndClone: function (arr, valueToRemove) {
-		
-	// },
+	removeAndClone: function (arr, valueToRemove) {
+		var newArray = [];
+		for(item of arr){
+			if(item != valueToRemove){
+				newArray.push(item);
+			}
+		}
+		return newArray;
+	},
 
 	// findIndexesOf: function (arr, itemToFind) {
 		
 	// },
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
-		
-	// }
+	sumOfAllEvenNumbersSquared: function (arr) {
+		var squareEvenArray = [];
+		var squareEvenCounter = 0;
+		for(item of arr){
+			if(item % 2 === 0){
+				squareEvenArray.push(item**2);
+			}
+		}
+		for(item of squareEvenArray){
+			squareEvenCounter += item
+		}
+		return squareEvenCounter;
+	}
 
 }
 
