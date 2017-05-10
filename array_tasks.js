@@ -33,11 +33,15 @@ var arrayTasks = {
 
 	findDuplicates: function (arr) {
 		var duplicateArray = [];
-		for(i=0; i<arr.length; i++){
-			if(item[i] === item[i+1]){
+		var indexPosition = 0;
+		// .includes
+		for(item of arr){
+			if(arr.includes(item, indexPosition+1)){
 				duplicateArray.push(item);
 			}
+			indexPosition += 1;
 		}
+		duplicateArray.pop();
 		return duplicateArray;
 	},
 
